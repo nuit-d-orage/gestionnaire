@@ -1,0 +1,576 @@
+:root {
+	--fond_clair : #3F4343;
+	--fond_fonce : #212424;
+}
+
+* {
+  box-sizing:border-box;
+  object-fit:cover;
+scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    background: rgb(90, 90, 95);
+    border: 0;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: black;
+    border: 0;
+}
+
+
+
+html {
+  height: 96%;
+  scroll-behavior: smooth;
+}
+
+a, a:hover {
+	color:inherit;
+	text-decoration:none;
+}
+
+body {
+  background-image:url('https://zupimages.net/up/21/08/05zu.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Oxygen', sans-serif;
+  font-size:16px;
+  color:#e8e8e8;
+  display:flex;
+  height:101%;
+  align-items:center;
+  justify-content:space-evenly;
+  overflow:hidden;
+  width:600vw;
+}
+
+z {
+	display: inline-block;
+    margin: 0 5px 0 0px;
+    color: #a0a8b8;
+font-weight: 700;
+text-transform: uppercase;
+}
+
+.liback {
+	color:white;
+	font-size:12px;
+	font-weight:bold;
+	mix-blend-mode:difference;
+	position:fixed;
+	top:15px;
+	left:15px;
+	opacity:0.7;
+}
+
+.liback:hover {
+	opacity:1;
+}
+
+.panel1 {
+  display:flex;
+  height:100%;
+  justify-content:space-evenly;
+  width:100vw;
+}
+
+.navigation {
+	position:fixed;
+	display:flex;
+	bottom:0px;
+	color:white;
+	left: 50vw;
+    transform: translateX(-50%);
+	width:50vw;
+	background-color:rgba(255,255,255,0.5);
+	line-height:70px;
+	height:70px;
+	justify-content:space-evenly;
+	font-size:1.35vw;
+	color:black;
+}
+
+.corps {
+	height:calc(103% - 95px);
+	width:50vw;
+	background-color:rgba(255,255,255,0.5);
+	transform: translateY(-1%);
+	overflow:hidden;
+}
+
+.corps h1 {
+	text-align:center;
+	font-size:2.8vw;
+	font-style:italic;
+	font-weight:300;
+	margin-bottom:0px;
+	color:black;
+}
+
+.corps h2 {
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight:100;
+	text-align:center;
+	font-size:2.3vw;
+	margin:0px;
+	line-height:15%;
+	opacity:0.85;
+}
+
+.corps .titre {
+	height:100px;
+}
+
+.grid {
+	display:grid;
+	height:calc(100% - 180px - 0.68em - 1.3vh);
+	margin:30px 50px 50px;
+}
+
+.grid > div {
+	padding:15px;
+	overflow:auto;
+	line-height:170%;
+}
+
+/*--------- PANNEL PRESENTATION -------*/
+.pres {
+  grid-template-columns: 1fr 1.9fr;
+  grid-template-rows: 1.28fr 1fr;
+  gap: 25px 25px;
+  grid-template-areas:
+    "image important"
+    "image caractere";
+}
+
+.pres img {
+	height:100%;
+	width:100%;
+	grid-area: image;
+	border:10px solid var(--fond_fonce);
+	overflow: hidden;
+	background-color:var(--fond_fonce);
+}
+
+.infimp {
+	grid-area: important;
+	background: var(--fond_fonce);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	line-height:250%;
+}
+
+.caractere {
+	grid-area:caractere;
+	background: var(--fond_clair);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/*--------- PANNEL + INFOS -------*/
+.infoplus {
+  grid-template-columns: 1fr 1.25fr;
+  grid-template-rows: 2.25fr 1fr;
+  gap: 25px 25px;
+  grid-template-areas:
+    "anecdotes histoire"
+    "imageplus imageplus";
+}
+
+.infoplus img {
+	height:100%;
+	width:100%;
+	grid-area: imageplus;
+	border:10px solid var(--fond_fonce);
+	overflow: hidden;
+	background-color:var(--fond_fonce);
+}
+
+div.anecplus {
+	grid-area: anecdotes;
+	background: var(--fond_fonce);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	padding:15px 0 0;
+}
+
+.titreanec {
+	height:40px;
+	line-height:40px;
+	font-size:35px;
+	text-align:center;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight:100;
+	font-style:italic;
+	background-image:url('https://zupimages.net/up/21/08/05zu.jpg');
+	margin:0px 15px 0;
+}
+
+.titrehisto {
+	height:40px;
+	line-height:40px;
+	font-size:35px;
+	text-align:center;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight:100;
+	font-style:italic;
+	background-image:url('https://zupimages.net/up/21/08/05zu.jpg');
+	margin:10px 15px 0;
+}
+
+.corpsanec {
+	height:calc(100% - 40px);
+	overflow:auto;
+	padding:0 15px 15px;
+}
+
+div.corpshisto {
+	height:calc(100% - 50px);
+	overflow:auto;
+	padding:15px 15px 0px;
+}
+
+div.histoplus {
+	grid-area:histoire;
+	background: var(--fond_clair);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	padding:0px 0px 15px;
+}
+
+/*------------- PANNEL HABITUDES ------*/
+
+.habit {
+	grid-template-columns: 0.45fr 1fr;
+  grid-template-rows: 1.3fr 1fr 1fr;
+  gap: 25px 25px;
+  grid-template-areas:
+    "gimportant gouts"
+    "imagegout imagegout"
+    "habitudes habitudes";
+}
+
+.himp {
+	grid-area:gimportant;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-image:url('https://zupimages.net/up/21/08/05zu.jpg');
+	font-size:18px;
+	line-height:120%
+}
+
+.habit img {
+	height:100%;
+	width:100%;
+	grid-area: imagegout;
+	border:10px solid var(--fond_fonce);
+	overflow: hidden;
+	background-color:var(--fond_fonce);
+}
+
+.gouts {
+	grid-area:gouts;
+	background-color:var(--fond_clair);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.habitul {
+	grid-area:habitudes;
+	background-color:var(--fond_fonce);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+div.habitul h3 {
+	height:100%;
+	width:75px;
+	position:relative;
+	padding:0;
+	margin:0 15px 0 0;
+	float:left;
+}
+	
+div.habitul h3 span {
+	transform: rotate(-90deg);
+	display: inline-block;
+	position:absolute;
+	left:-35%;
+	top:35%;
+	
+}
+
+/*------------- PANNEL chronologie ------*/
+
+.chronol {
+	grid-template-columns: 0.45fr 1fr;
+	grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: 1fr 0.5fr;
+  gap: 25px 25px;
+  grid-template-areas:
+    "chronologie chronologie"
+    "imagechro listerp";
+}
+
+.corchrono {
+	grid-area:chronologie;
+	background-color:var(--fond_fonce);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	align-items: stretch;
+	align-content: flex-start;
+}
+
+.corchrono h3, .listrp h3 {
+	margin-top:0px;
+	height:45px;
+	line-height:45px;
+	text-align:center;
+	font-size:30px;
+	background-color:var(--fond_fonce);
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight:100;
+	font-style:italic;
+	margin-bottom:15px;
+	width:100%;
+}
+
+.corchrono .date, .historiquehrp .date {
+	width:75px;
+	min-height:175px;
+	margin-bottom:25px;
+	text-align:center;
+	padding:50px 0px 25px;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight:100;
+	font-style:italic;
+	font-size:25px;
+	background-image:url('https://zupimages.net/up/21/08/05zu.jpg');
+}
+
+.corchrono .date > div,  .historiquehrp .date > div {
+    transform: rotate(-90deg);
+    text-align: center;
+    height: 75px;
+    width: 125px;
+}
+
+.corchrono .descri {
+	width:calc(100% - 100px);
+	margin-bottom:25px;
+}
+
+.corchrono .descri:last-child {
+	margin-bottom:0px;
+}
+
+.chronol img {
+	height:100%;
+	width:100%;
+	grid-area: imagechro;
+	border:10px solid var(--fond_fonce);
+	overflow: hidden;
+	background-color:var(--fond_fonce);
+}
+
+.listrp {
+	grid-area:listerp;
+	background-color:var(--fond_clair);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.listrp a, .liensu a {
+	margin:0px 5px;
+	font-size:18px;
+	font-weight:300;
+}
+
+.listrp h3 {
+	background-image:url('https://zupimages.net/up/21/08/05zu.jpg');
+}	
+
+/*------------- PANNEL social ------*/
+
+.social {
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: 1fr 0.625fr;
+  gap: 25px 25px;
+  grid-template-areas:
+    "menusoc sociall"
+    "imagesoc sociall";
+}
+
+.menusoci {
+	grid-area:menusoc;
+	background-color:var(--fond_clair);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.menusoci a {
+	display:block;
+	text-align:center;
+	font-size:25px;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight:100;
+	font-style:italic;
+	margin-top:25px;
+}
+
+div.socialli {
+	grid-area:sociall;
+	background-color:var(--fond_fonce);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	overflow:hidden;
+	padding:0;
+}
+
+.social img {
+	height:100%;
+	width:100%;
+	grid-area: imagesoc;
+	border:10px solid var(--fond_fonce);
+	overflow: hidden;
+	background-color:var(--fond_fonce);
+}
+
+.socialbloc {
+	height:102%;
+	overflow:auto;
+	padding:0 15px 15px;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	align-items: flex-start;
+	align-content: flex-start;
+}
+
+.socialbloc h3 {
+	position:sticky;
+	height:45px;
+	line-height:45px;
+	text-align:center;
+	font-size:30px;
+	top:-15px;
+	left:0px;
+	background-image:url('https://zupimages.net/up/21/08/05zu.jpg');
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight:100;
+	font-style:italic;
+	margin-bottom:15px;
+	width:100%;
+}
+
+.socialbloc img {
+	width:125px;
+	height:150px;
+	border:none;
+	margin-bottom:25px;
+}
+
+.descrili {
+	width:calc(100% - 150px);
+	height:150px;
+	overflow:hidden;
+	margin-bottom:25px;
+}
+
+.descrili h4 {
+	margin: 2px 0;
+    font-family: 'Josefin Sans';
+    font-weight: 100;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.descrili:hover {
+	overflow:auto;
+}
+
+.descrili:last-child {
+	margin-bottom:0px;
+}
+
+
+/*---------- PANNEL RESSOURCES ------*/
+
+.ressources {
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 0.7fr 1fr 0.7fr;
+	gap: 25px 25px;
+	grid-template-areas:
+    "galeries histohrp histohrp"
+    "galeries unoimg dosimg"
+    "utliens utliens utliens";
+}
+
+.galeries {
+	grid-area:galeries;
+	background-color:var(--fond_fonce);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.historiquehrp {
+	grid-area:histohrp;
+	background-color:var(--fond_clair);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.ressuno {
+	height:100%;
+	width:100%;
+	grid-area: unoimg;
+	border:10px solid var(--fond_fonce);
+	overflow: hidden;
+	background-color:var(--fond_fonce);
+}
+
+.ressdos {
+	height:100%;
+	width:100%;
+	grid-area: dosimg;
+	border:10px solid var(--fond_fonce);
+	overflow: hidden;
+	background-color:var(--fond_fonce);
+}
+	
+.liensu {
+	grid-area:utliens;
+	background-color:var(--fond_fonce);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.ressources h3, .gouts h3, .habitul h3 {
+	margin-top:0px;
+	height:45px;
+	line-height:45px;
+	text-align:center;
+	font-size:30px;
+	background-image:url('https://zupimages.net/up/21/08/05zu.jpg');
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight:100;
+	font-style:italic;
+	margin-bottom:15px;
+	width:100%;
+}
+
+.galeries ul {
+	padding-left:25px;
+	margin-bottom:25px;
+}
+
+.galeries li {
+	list-style:none;
+}
+
+.galeries li::before {
+	content:"— ";
+	margin-right:15px;
+}
+
+.historiquehrp div.date {
+	height:100%;
+	min-height:0;
+	margin:0px;
+	padding-top:35px;
+	float:left;
+	margin-right:25px;
+}
