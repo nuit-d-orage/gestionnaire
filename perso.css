@@ -294,7 +294,18 @@ div.habitul h3 span {
 	position:absolute;
 	left:-35%;
 	top:35%;
-	
+}
+
+div.habitul ul {
+	margin-left:65px;
+}
+
+div.habitul li {
+	margin-bottom:10px;
+}
+
+div.habitul li:last-child {
+	margin-bottom:none;
 }
 
 /*------------- PANNEL chronologie ------*/
@@ -380,7 +391,7 @@ div.habitul h3 span {
 
 .listrp a, .liensu a {
 	margin:0px 5px;
-	font-size:18px;
+	font-size:16px;
 	font-weight:300;
 }
 
@@ -412,7 +423,7 @@ div.habitul h3 span {
 	font-family: 'Josefin Sans', sans-serif;
 	font-weight:100;
 	font-style:italic;
-	margin-top:25px;
+	margin-top:20px;
 }
 
 div.socialli {
